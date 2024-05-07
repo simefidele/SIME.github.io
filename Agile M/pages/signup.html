@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="../fonts/font.css"/>
+    <script type="text/javascript" src="js/index.js"></script>
+    <style>
+        body{
+            background-color: #160830;
+        }
+        form{
+            background-color: #dae4eb;
+            border: 2px solid #dae4eb94;
+            width: 350px;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 20px;
+            box-shadow: 0 0 10px 1px #fffa;
+            border-radius: 20px;
+        }
+        form h1{
+            font-family: mp-nova;
+            text-align: center;
+            font-size: 1.5em;
+        }
+        form div{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: center;
+        }
+        label{
+            font-family: mp-hack;
+            letter-spacing: -2px;
+        }
+        input{
+            font-family: mp-nova;
+            font-size: 1.2em;
+            border-radius: 10px;
+            border-style: solid;
+            padding: 5px;
+        }
+        input[type="submit"]{
+            background-color: #160830;
+            color: #dae4eb;
+            font-family: mp-nova;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 40px;
+            cursor: pointer;
+        }
+    </style>
+    <title>Creation de Compte</title>
+</head>
+<body onload="remplit()">
+
+    <div id="main">
+        
+        <a href="../index.html">
+            <div id="home" class="icons_nav" style="cursor: pointer;">
+            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+            <lord-icon
+                src="https://cdn.lordicon.com/wmwqvixz.json"
+                trigger="hover"
+                colors="primary:#dae4eb"
+                style="width:30px;height:30px">
+            </lord-icon>
+            </div>
+        </a> 
+
+        <form action="" method="post">
+            <h1>S'enregistre en tant que enseignant</h1>
+            <div>
+                <div>           
+                    <label for="nom">Nom: </label>
+                    <input type="text" name="nom" id="nom"><br/>
+                </div> 
+                <div>           
+                    <label for="matiere">Matiere: </label>
+                    <input type="text" name="matiere" id="matiere"><br/>
+                </div>
+                <div>           
+                    <label for="login">Login: </label>
+                    <input type="text" name="login" id="login"><br/>
+                </div> 
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" id="password"><br>
+                </div> 
+            </div>
+            <input type="submit" value="Se connecter"/>
+        </form>
+
+    </div>
+
+</body>
+</html>

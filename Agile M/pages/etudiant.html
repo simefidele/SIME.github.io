@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../fonts/font.css"/>
+    <script type="text/javascript" src="../js/etudiant.js"></script>
+    <title>Session Etudiant</title>
+</head>
+<body onload="remplit()">
+
+    <div id="main">
+
+        <nav>
+
+            <div id="home" class="icons_nav" onclick="home()">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/wmwqvixz.json"
+                    trigger="hover"
+                    colors="primary:#160830"
+                    style="width:30px;height:30px">
+                </lord-icon>
+                <span>&nbsp;Acceuil</span>
+            </div>
+
+            <div id="edt" class="icons_nav" onclick="emploidt()">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/wmlleaaf.json"
+                    trigger="hover"
+                    colors="primary:#dae4eb"
+                    style="width:30px;height:30px">
+                </lord-icon>
+                <span>&nbsp;Emploi de temps</span>
+            </div>
+
+        </nav>
+        <form id="myForm" action="" method="post">
+            <div id="nav2">
+                <div id="log_in"><a href="../index.html">Log out</a></div>
+            </div>
+
+            <div id="main_home">
+                <div id="img"><h1>Session Etudiant</h1></div>
+                <div id="date">Jounée du: <input type="text" id="date" name="date" disabled></div>
+                <div id="today">
+                    <h3><input type="texte" id="en_cour" disabled name="en_cour"/></h3>
+                    <div id="div">
+                        <div>Debut: <input type="text" id="cour" disabled name="debut"><br></div>
+                        <div>cours: <input type="text" id="cour" disabled name="cour_de"><br></div>
+                        <div>Enseignat: <input type="text" id="cour" disabled name="enseignant"><br></div>
+                        <div>fin: <input type="text" id="cour" disabled name="fin"><br></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="empl_de_temps">
+                <h1>Emploi de temps de la Semaine</h1>
+
+                <div id="semaine_du">Semaine du : <input type="text" name="semaine_du" disabled> au : <input type="text" name="semaine_au" disabled></div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th style="border-top-width: 0; border-left-width: 0"></th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th><th>Samedi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7h30 - 9h30</td>
+                            <td><input type="text" name="lundi1" disabled><br/><input type="text" name="lundi1p" disabled></td>
+                            <td><input type="text" name="mardi1" disabled><br/><input type="text" name="mardi1p" disabled></td>
+                            <td><input type="text" name="mercredi1" disabled><br/><input type="text" name="mercredi1p" disabled></td>
+                            <td><input type="text" name="jeudi1" disabled><br/><input type="text" name="jeudi1p" disabled></td>
+                            <td><input type="text" name="vendredi1" disabled><br/><input type="text" name="vendredi1p" disabled></td>
+                            <td><input type="text" name="samedi1" disabled><br/><input type="text" name="samedi1p" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>9h30 - 11h30</td>
+                            <td><input type="text" name="lundi2" disabled><br/><input type="text" name="lundi2p" disabled></td>
+                            <td><input type="text" name="mardi2" disabled><br/><input type="text" name="mardi2p" disabled></td>
+                            <td><input type="text" name="mercredi2" disabled><br/><input type="text" name="mercredi2p" disabled></td>
+                            <td><input type="text" name="jeudi2" disabled><br/><input type="text" name="jeudi2p" disabled></td>
+                            <td><input type="text" name="vendredi2" disabled><br/><input type="text" name="vendredi2p" disabled></td>
+                            <td><input type="text" name="samedi2" disabled><br/><input type="text" name="samedi2p" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>11h30 - 12h45</td><td colspan="7" style="text-align: center;">P.A.U.S.E</td>
+                        </tr>
+                        <tr>
+                            <td>12h45 - 14h45</td>
+                            <td><input type="text" name="lundi3" disabled><br/><input type="text" name="lundi3p" disabled></td>
+                            <td><input type="text" name="mardi3" disabled><br/><input type="text" name="mardi3p" disabled></td>
+                            <td><input type="text" name="mercredi3" disabled><br/><input type="text" name="mercredi3p" disabled></td>
+                            <td><input type="text" name="jeudi3" disabled><br/><input type="text" name="jeudi3p" disabled></td>
+                            <td><input type="text" name="vendredi3" disabled><br/><input type="text" name="vendredi3p" disabled></td>
+                            <td><input type="text" name="samedi3" disabled><br/><input type="text" name="samedi3p" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>14h45 - 16h45</td>
+                            <td><input type="text" name="lundi4" disabled><br/><input type="text" name="lundi4p" disabled></td>
+                            <td><input type="text" name="mardi4" disabled><br/><input type="text" name="mardi4p" disabled></td>
+                            <td><input type="text" name="mercredi4" disabled><br/><input type="text" name="mercredi4p" disabled></td>
+                            <td><input type="text" name="jeudi4" disabled><br/><input type="text" name="jeudi4p" disabled></td>
+                            <td><input type="text" name="vendredi4" disabled><br/><input type="text" name="vendredi4p" disabled></td>
+                            <td><input type="text" name="samedi4" disabled><br/><input type="text" name="samedi4p" disabled></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </from>
+
+        <footer>
+            <p>©Copyright | TP-Methode Agile | Groupe 5</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

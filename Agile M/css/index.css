@@ -1,0 +1,188 @@
+html{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #dae4eb;
+}
+#main{
+    background-color: #85858556;
+    padding: 20px;
+    box-shadow: 0 0 10px 1px #222;
+    border-radius: 20px;
+    height: 90vh;
+    width: 90vw;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+
+table{ border-collapse: collapse;}
+td,th{
+    border: 2px solid rgb(0, 0, 0);
+    padding: 5px 10px;
+}
+
+nav{
+    border: 2px solid #160830;
+    background-color: #160830;
+    color: #dae4eb;
+    border-radius: 20px 0 0 20px;
+    padding: 10px 0px 10px 20px;
+    height: 90%;
+    width: 200px;
+    position: fixed;
+    font-family: mp-nova;
+    font-weight: 900;
+}
+.icons_nav{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+nav #home{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+nav + form{
+    margin-left: 240px;
+}
+
+#nav2{
+    border: 0px solid #160830;
+    position: fixed;
+    right: 20px;
+}
+#nav2 #log_in a{
+    background-color: #160830;
+    color: #dae4eb;
+    font-family: mp-nova;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+#nav2 #sign_up a{
+    color: #160830;
+    font-family: mp-nova;
+    text-decoration: none;
+}
+#nav2 a:hover{
+    font-weight: 900;
+}
+
+#main_home{
+    border: 0px solid blue;
+    position: relative;
+    top: 80px;
+    display: unset;
+}
+input{ 
+    color: #000; 
+    font-family: mp-nova; 
+    text-align: center;
+}
+#main_home h1{
+    color: #160830;
+    font-family: mp-above;
+    text-align: center;
+    font-size: 2.5em;
+}
+#main_home #date{
+    text-align: center;
+}
+#main_home #today{
+    box-shadow: 0 0 20px 1px #222;
+    margin-top: 50px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    width: 94%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    font-size: 1em;
+}
+#main_home #today div{
+    border: 0px solid red;
+    margin: 10px;
+    width: 200px;
+}
+#main_home #today div input{
+    height: 100px;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 1.1em;
+}
+#main_home #today #div{
+    border-color: green;
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#empl_de_temps{
+    display: none;
+    position: relative;
+    top: 80px;
+}
+#empl_de_temps #semaine_du{
+    text-align: center;
+    border: 0px solid red;
+    margin-top: 10px;
+    font-family: mp-nova;
+}
+table{
+    margin-top: 55px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+table input{
+    border: 0px solid red;
+    width: auto;
+    height: 30px;
+}
+#empl_de_temps h1{
+    font-family: mp-above;
+    text-align: center;
+}
+
+#home{
+    background-color: #bec3c9;
+    padding: 10px;
+    color: #160830;
+    margin-right: -2px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+footer{
+    margin-left: -240px;
+    position: absolute;
+    top: 92%;
+    border: 2px solid #160830;
+    background-color: #160830;
+    width: 96%;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    color: #dae4eb;
+    font-size: .7em;
+    font-family: mp-trebuchet;
+}
+
+
+
+@media screen and (min-width: 1500px) {
+    #main{
+        width: 1400px;
+    }    
+}
+

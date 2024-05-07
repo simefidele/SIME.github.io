@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/index.css"/>
+    <link rel="stylesheet" href="../fonts/font.css"/>
+    <script type="text/javascript" src="../js/prof.js"></script>
+    <title>Session Administrateur</title>
+    <style>
+        select{
+            padding: 20px;
+            border-radius: 10px;
+            margin: 10px;
+            font-size: 1.1em;
+        }
+        #main_home #today div input{
+            height: 50px;
+        }
+        #main_home #today{
+            height: 45vh;
+            overflow: auto;
+            display: block;
+        }
+        #main_home #today h3{
+            font-family: mp-nova;
+            font-weight: bold;
+        }
+        #main_home #today div input[type="radio"]{
+            height: unset;
+            border-radius: unset;
+            margin: unset;
+            font-size: unset;
+            cursor: pointer;
+        }
+        label{
+            font-family: mp-nova;
+        }
+        input[type="submit"]{
+            margin-top: 30px;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
+            background-color: #160830;
+            color: #dae4eb;
+            font-family: mp-nova;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        #dasboard{
+            box-shadow: 0 0 10px 1px #222;
+            border-radius: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 70px;
+        }
+        .bouttons{
+            border: 2px solid #160830;
+            margin: 40px;
+            height: 120px;
+            width: 120px;
+            display: flex;
+            flex-direction: column;
+            font-family: mp-nova;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 3px 1px;
+            cursor: pointer;
+            font-weight: 900;
+        }
+        .bouttons:hover{
+            box-shadow: unset;
+        }
+        .bouttons:active{
+            transform: scale(.9);
+        }
+        #make_e{
+            transform: scale(1.2);
+        }
+        #make_e:active{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body onload="remplit()">
+
+    <div id="main">
+
+        <nav>
+
+            <div id="home" class="icons_nav" onclick="home()">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/wmwqvixz.json"
+                    trigger="hover"
+                    colors="primary:#160830"
+                    style="width:30px;height:30px">
+                </lord-icon>
+                <span>&nbsp;Acceuil</span>
+            </div>
+
+            <div id="edt" class="icons_nav" onclick="emploidt()">
+                <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                <lord-icon
+                    src="https://cdn.lordicon.com/wmlleaaf.json"
+                    trigger="hover"
+                    colors="primary:#dae4eb"
+                    style="width:30px;height:30px">
+                </lord-icon>
+                <span>&nbsp;Emploi de temps</span>
+            </div>
+
+        </nav>
+        <form id="myForm" action="" method="post">
+            <div id="nav2">
+                <div id="log_in"><a href="../index.html">Log out</a></div>
+            </div>
+
+            <div id="main_home">
+                <div id="img"><h1>Session Administrateur</h1></div>
+
+                <div id="dasboard">
+
+                    <a href="main.php">
+                        <div id="make_e" class="bouttons">
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/wmlleaaf.json"
+                                trigger="hover"
+                                colors="primary:#160830"
+                                style="width:50px;height:50px">
+                            </lord-icon>
+                            <span>Realiser un emploi de temps</span>
+                        </div>
+                    </a>
+                    <a href="ajout_etud.php">
+                    <div id="add_student" class="bouttons">
+                        
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                            src="https://cdn.lordicon.com/zrkkrrpl.json"
+                            trigger="hover"
+                            style="width:50px;height:50px">
+                            </lord-icon>
+                            <span>Ajouter un etudiant</span>
+                    </div>
+                    </a>
+
+                    <a href="ajout_ens.php">
+                    <div id="add_prof" class="bouttons">
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/zrkkrrpl.json"
+                                trigger="hover"
+                                style="width:50px;height:50px">
+                            </lord-icon>
+                            <span>Ajouter un enseignant</span>
+                    </div>
+                    </a>
+
+                    <a href="ajout_class.php">
+                    <div id="del_student" class="bouttons">
+                            <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                            <lord-icon
+                            src="https://cdn.lordicon.com/zrkkrrpl.json"
+                            trigger="hover"
+                            style="width:50px;height:50px">
+                            </lord-icon>
+                            <span>ajouter une classe</span>
+                    </div>
+                    </a>
+                    
+                    <div id="del_student" class="bouttons">
+                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/dykoqszm.json"
+                            trigger="hover"
+                            style="width:50px;height:50px">
+                        </lord-icon>
+                        <span>supprimer un etudiant</span>
+                    </div>
+                    <div id="del_prof" class="bouttons">
+                        <script src="https://cdn.lordicon.com/lordicon.js"></script>
+                        <lord-icon
+                            src="https://cdn.lordicon.com/dykoqszm.json"
+                            trigger="hover"
+                            style="width:50px;height:50px">
+                        </lord-icon>
+                        <span>supprimer un enseignant</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="empl_de_temps">
+                <h1>Emploi de temps de la Semaine</h1>
+
+                <div id="semaine_du">Semaine du : <input type="text" name="semaine_du" disabled> au : <input type="text" name="semaine_au" disabled></div>
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th style="border-top-width: 0; border-left-width: 0"></th><th>Lundi</th><th>Mardi</th><th>Mercredi</th><th>Jeudi</th><th>Vendredi</th><th>Samedi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>7h30 - 9h30</td>
+                            <td><input type="text" name="lundi1" disabled><br/><input type="text" name="lundi1p" disabled></td>
+                            <td><input type="text" name="mardi1" disabled><br/><input type="text" name="mardi1p" disabled></td>
+                            <td><input type="text" name="mercredi1" disabled><br/><input type="text" name="mercredi1p" disabled></td>
+                            <td><input type="text" name="jeudi1" disabled><br/><input type="text" name="jeudi1p" disabled></td>
+                            <td><input type="text" name="vendredi1" disabled><br/><input type="text" name="vendredi1p" disabled></td>
+                            <td><input type="text" name="samedi1" disabled><br/><input type="text" name="samedi1p" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>9h30 - 11h30</td>
+                            <td><input type="text" name="lundi2" disabled><br/><input type="text" name="lundi2p" disabled></td>
+                            <td><input type="text" name="mardi2" disabled><br/><input type="text" name="mardi2p" disabled></td>
+                            <td><input type="text" name="mercredi2" disabled><br/><input type="text" name="mercredi2p" disabled></td>
+                            <td><input type="text" name="jeudi2" disabled><br/><input type="text" name="jeudi2p" disabled></td>
+                            <td><input type="text" name="vendredi2" disabled><br/><input type="text" name="vendredi2p" disabled></td>
+                            <td><input type="text" name="samedi2" disabled><br/><input type="text" name="samedi2p" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>11h30 - 12h45</td><td colspan="7" style="text-align: center;">P.A.U.S.E</td>
+                        </tr>
+                        <tr>
+                            <td>12h45 - 14h45</td>
+                            <td><input type="text" name="lundi3" disabled><br/><input type="text" name="lundi3p" disabled></td>
+                            <td><input type="text" name="mardi3" disabled><br/><input type="text" name="mardi3p" disabled></td>
+                            <td><input type="text" name="mercredi3" disabled><br/><input type="text" name="mercredi3p" disabled></td>
+                            <td><input type="text" name="jeudi3" disabled><br/><input type="text" name="jeudi3p" disabled></td>
+                            <td><input type="text" name="vendredi3" disabled><br/><input type="text" name="vendredi3p" disabled></td>
+                            <td><input type="text" name="samedi3" disabled><br/><input type="text" name="samedi3p" disabled></td>
+                        </tr>
+                        <tr>
+                            <td>14h45 - 16h45</td>
+                            <td><input type="text" name="lundi4" disabled><br/><input type="text" name="lundi4p" disabled></td>
+                            <td><input type="text" name="mardi4" disabled><br/><input type="text" name="mardi4p" disabled></td>
+                            <td><input type="text" name="mercredi4" disabled><br/><input type="text" name="mercredi4p" disabled></td>
+                            <td><input type="text" name="jeudi4" disabled><br/><input type="text" name="jeudi4p" disabled></td>
+                            <td><input type="text" name="vendredi4" disabled><br/><input type="text" name="vendredi4p" disabled></td>
+                            <td><input type="text" name="samedi4" disabled><br/><input type="text" name="samedi4p" disabled></td>
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </from>
+
+        <footer>
+            <p>©Copyright | TP-Methode Agile | Groupe 5</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
